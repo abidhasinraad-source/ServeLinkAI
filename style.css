@@ -110,9 +110,9 @@ img {
 }
 
 .btn-secondary {
-    background-color: #FFFFFF;
+    background-color: transparent;
     border-color: var(--primary-color);
-    color: var(--primary-color);
+    color: #FFFFFF;
 }
 
 .btn-secondary:hover {
@@ -131,7 +131,7 @@ img {
 
 .badge {
     display: inline-block;
-    background-color: rgba(37, 99, 235, 0.1);
+    background-color: rgba(37, 99, 235, 0.15);
     color: var(--primary-color);
     font-weight: 600;
     font-size: 0.85rem;
@@ -143,7 +143,7 @@ img {
 }
 
 /* ==========================================================================
-   4. NAVIGATION HEADER
+   4. NAVIGATION HEADER (DARK ENHANCED & BIGGER LOGO)
    ========================================================================== */
 .site-header {
     position: fixed;
@@ -156,24 +156,27 @@ img {
     transition: var(--transition-smooth);
 }
 
-/* Handled via JavaScript upon scroll injection */
+/* Scroll korle navigation bar dark slate-black e thakbe */
 .site-header.scrolled {
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(8px);
+    background-color: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.5);
 }
 
 .nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    height: 90px; /* Logo width adjust korar jonno arektu barano holo */
 }
 
+/* Logo dynamic wide sizing fix */
 .logo-img {
-    height: 40px;
-    width: auto;
+    height: 55px;        /* 40px theke barie wide element er jonno clear visualization */
+    width: auto;         /* Aspect ratio automatic preserve thakbe */
+    display: block;
+    object-fit: contain;
 }
 
 .main-nav {
@@ -197,7 +200,7 @@ img {
     color: var(--primary-color);
 }
 
-/* Hamburger Menu Toggle */
+/* Hamburger Menu Toggle (Mobile Responsive) */
 .mobile-nav-toggle {
     display: none;
     background: none;
@@ -211,7 +214,7 @@ img {
 .mobile-nav-toggle .bar {
     width: 24px;
     height: 2px;
-    background-color: var(--dark-color);
+    background-color: #FFFFFF;
     transition: var(--transition-smooth);
 }
 
@@ -251,7 +254,7 @@ img {
 .hero-image-wrapper {
     position: relative;
     border-radius: 12px;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
     border: 1px solid var(--border-color);
     background-color: var(--light-bg-color);
     overflow: hidden;
@@ -312,7 +315,7 @@ img {
 }
 
 .feature-card {
-    background-color: var(--bg-color);
+    background-color: var(--light-bg-color); /* Dark optimization integration */
     border: 1px solid var(--border-color);
     padding: 2.5rem;
     border-radius: 12px;
@@ -321,14 +324,14 @@ img {
 
 .feature-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
-    border-color: rgba(37, 99, 235, 0.3);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+    border-color: rgba(37, 99, 235, 0.5);
 }
 
 .feature-icon-wrapper {
     height: 48px;
     width: 48px;
-    background-color: rgba(37, 99, 235, 0.05);
+    background-color: rgba(37, 99, 235, 0.1);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -348,7 +351,6 @@ img {
 
 .feature-card p {
     color: var(--text-color);
-    opacity: 0.85;
     font-size: 0.975rem;
 }
 
@@ -388,10 +390,10 @@ img {
 }
 
 .form-wrapper {
-    background-color: var(--bg-color);
+    background-color: var(--bg-color); /* Dark form container placeholder */
     padding: 2.5rem;
     border-radius: 12px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
     border: 1px solid var(--border-color);
 }
 
@@ -415,8 +417,8 @@ img {
     border-radius: 6px;
     font-family: var(--font-main);
     font-size: 0.95rem;
-    color: var(--text-color);
-    background-color: #FFFFFF;
+    color: #FFFFFF;
+    background-color: var(--light-bg-color); /* White input body change layout dark target */
     transition: var(--transition-smooth);
 }
 
@@ -424,7 +426,7 @@ img {
 .inline-demo-form select:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
 }
 
 /* ==========================================================================
@@ -444,7 +446,7 @@ img {
 }
 
 .footer-logo {
-    height: 35px;
+    height: 45px; /* Alignment scaling fix */
     width: auto;
     margin-bottom: 1.25rem;
 }
@@ -542,11 +544,11 @@ img {
     
     .main-nav {
         position: fixed;
-        top: 80px;
+        top: 90px; /* Synchronized with navbar height logic */
         left: 0;
         width: 100%;
-        height: calc(100vh - 80px);
-        background-color: #FFFFFF;
+        height: calc(100vh - 90px);
+        background-color: var(--light-bg-color); /* White background converted to premium dark tone */
         border-top: 1px solid var(--border-color);
         flex-direction: column;
         padding: 3rem 2rem;
