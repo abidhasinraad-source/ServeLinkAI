@@ -1,14 +1,14 @@
 /* ==========================================================================
-   1. VARIABLES & RESET
+   1. VARIABLES & RESET (DARK THEME OPTIMIZED)
    ========================================================================== */
 :root {
-    --primary-color: #2563EB;
-    --dark-color: #0F172A;
-    --accent-color: #22C55E;
-    --bg-color: #FFFFFF;
-    --light-bg-color: #F8FAFC;
-    --text-color: #1E293B;
-    --border-color: #E2E8F0;
+    --primary-color: #2563EB;      /* Premium Blue CTA */
+    --dark-color: #FFFFFF;         /* Headings become white for high contrast */
+    --accent-color: #22C55E;        /* Vibrant green accent */
+    --bg-color: #0F172A;           /* Deep dark blue-black slate background */
+    --light-bg-color: #1E293B;     /* Slightly lighter slate for cards/sections */
+    --text-color: #94A3B8;         /* Muted gray-blue for highly readable body text */
+    --border-color: #334155;       /* Subtle dark borders */
     --font-main: 'Inter', sans-serif;
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
